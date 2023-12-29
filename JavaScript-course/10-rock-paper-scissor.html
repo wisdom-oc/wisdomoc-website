@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../styles/10-rock-paper-scissor.css">
+    <!-- This line of code is a link to the styling file -->
+  </head>
+  <body>
+    <!-- Following the code line by line means tracing the code -->
+    <p class="title">Rock Paper Scissors</p>
+    
+    <button onclick="
+      playGame('rock'); "
+      class="move-button">
+    <img src="../image/rock.png" 
+      class="move-icons">
+    </button>
+    
+    <button onclick="
+      playGame('paper'); "  
+      class="move-button">
+    <img src="../image/paper.png"
+      class="move-icons">
+    </button>
+    
+    <button onclick="
+      playGame('scissors'); "  
+      class="move-button">
+    <img src="../image/scissor.png"
+    class="move-icons">
+    </button>
+    
+    <!-- We use the DOM to put the result, moves and the score in these <p></p> below -->
+    <p class="js-result result">
+    </p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+    
+    <button onclick=" <!-- Resetting the scores by reassigning the property value to(= 0) -->
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score'); <!-- it removes the score from localStorage using localStorage.removeItem() and then uses the code in line 41 - 45 || the code in 47 - 53 to correct the null and makes it works perfectly -->
+      updateScoreElement(); <!-- when the reset button is clicked, it will reset the score back to zero -->
+  "
+  class="reset-score-button">Reset Score</button>
+    
+  <script src="../scripts/10-rock-paper-scissor.js"></script> <!-- This line of code is a link to the JavaScript file,code or works(function) -->
+  
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boolean</title>
+</head>
+<body>
+  <script>
+   <!-- Order of Operations:  1. (...),      2. * /   3. + -,   4. Comparison operators examples are: greater than (>), less than (<), greater than or equal to (>=), less than or equal to (<=), equal to (===), not equal to (!==), 5. Logical Operators examples are: And(&&), Or(||), Not(!),  -->
+    
+    <!-- A Boolean value represents whether something is true or false -->
+    
+    true
+    false
+    console.log(3 < 5); <!--  // true -->
+    console.log(3 > 5); <!-- // false -->
+    console.log(5 == '5.00'); <!-- // true -->
+    console.log(5 === '5.00'); <!-- false --> because they\'re not the same type
+     <!-- If Statements: 1. Lets us write multiple groups of code 2. And then decide which code to run -->
+    
+    if (true) {
+      console.log('hello'); <!-- // true because hello is defined with string type. -->
+    }
+    if (false) {
+      console.log('hello'); <!--  // false and it can\'t be run on the browser unless else is included example below -->
+    }
+    if (false) {
+      console.log('hello');
+    } else {
+      console.log('else');
+    }  
+       <!--  // now because it was false but it can run on the browser with else value (else) -->
+    if (15 >= 16) { <!-- else will be the output because 15 is not greater than 16 -->
+      console.log('You can drive');
+    } else {
+      console.log('You can not drive');
+    }  
+    if (15 >= 13) { <!-- true because 15 is greater than 13 -->
+      console.log('You can drive');
+      console.log('Congrats');
+    } else {
+      console.log('You can not drive');
+    } 
+    
+    if (15 >= 18) {
+      console.log('You can drive');
+      console.log('congrats');
+    } else if (15 >= 10) {
+      console.log('Almost there!');
+    } else {
+      console.log('You can not drive');
+    } 
+    <!-- else if is another way to write a code to replace (if) if (if) is false -->
+    
+    console.log(true && true);
+    console.log(0.2 >= 0 && 0.2 < 1/3);
+    console.log(true && false);
+    console.log(false && false);
+    console.log(true || true);
+    console.log(false || false);
+    console.log(!true);
+    console.log(!false);
+    
+    <!-- Truthy values behaves just like true examples are below -->
+    if (5) {
+      console.log('truthy');
+    }
+    
+      const cartQuantity = 5;
+    
+    if (cartQuantity) {
+      console.log('cart has products');
+    }
+    console.log(!0); <!-- true because the Not value (!) signifies that is not 0(false) anymore -->
+    
+     <!-- Falsy values behaves just like false, falsy values includes: 1. false, 2. 0, 3. empty string (''), 4. NaN(Not a Number), 5. undefined value, 6. Null(empty). Any value not on this list is truthy, examples are below -->
+    if (0) {
+      console.log('falsy'); <!-- because it is falsy it will not run the code -->
+    }
+    console.log('text' / 5);<!-- NaN because text is not a number -->
+    const variable1 = undefined;
+    console.log(variable1); <!-- the value is undefined -->
+    
+    <!-- Shortcuts for if-Statements are: 1. Ternary Operators(?), 2.Guard Operators(And&&), 3. Default Operators (Or||), examples below -->
+    
+    <!-- Examples of 1. Ternary Operators(?) below,-->
+    <!-- Shortcut of: if (true) {'truthy'} else {'falsy'} -->
+   let result = true? 'truthy' : 'falsy'
+     console.log(result); <!-- truthy because is true -->
+     
+   result = 0 ? 'truthy' : 'falsy'
+    console.log(result); <!-- falsy because the value (0) is false -->
+     <!-- Shortcut of: let result;   if (0) { result = 'truthy'; } else { result =  'falsy'; }  console.log(result); -->
+     
+     <!-- Examples of 2.Guard Operators(And&&),-->
+     <!-- Shortcut of: if (condition) i.e variable { console.log('hello'); } -->
+   false && console.log('hello'); <!-- false and the code('hello') will not run -->
+   
+   <!-- Shortcut of: let message;  if (condition) i.e the variable { message = 'hello' } console.log(message); -->
+   const message = 5 && 'hello'; <!-- true and the output is hello -->
+   console.log(message);
+   
+   <!-- 3. Default Operators (Or||), it checks at least one side is truthy, examples below -->
+   
+   <!-- Shortcut of: let currency;  if (!condition) i.e the variable { currency = 'USD' } console.log(message); -->
+   let currency = undefined || 'USD'; <!-- USD is true -->
+     console.log(currency);
+     currency = 'Naira' || 'USD';
+     console.log(currency); <!-- Both are true and it runs the first value -->
+  </script>
+</body>
+</html>

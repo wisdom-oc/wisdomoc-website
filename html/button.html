@@ -1,0 +1,89 @@
+<!DOCTYPEhtml>
+<html>
+  <head>
+    <title>button and div practice</title>
+    <style>
+      .search {
+      margin-top: 250px;
+      margin-bottom: 30px;
+      padding: 5px;
+      width: 200px;
+      display: block;
+      margin-left: 50px;
+      }
+      .subscribe {
+      background-color: rgb(200,0,0);
+      color: white;
+      border: none;
+      height: 36px;
+      width: 95px;
+      cursor: pointer;
+      border-radius: 2px;
+      margin-left: 30px;
+      font-size: 15px;
+      display: block;
+      }
+      .subscribe:hover {
+      opacity: 0.8;
+      }
+      .subscribe:active {
+      opacity: 0.5;
+      }
+      .join {
+      background-color: white;
+      color: rgb(41,118,211);
+      border-style: solid;
+      margin-top: 10px;
+      border-radius: 2px;
+      border-width: 1px;
+      height: 36px;
+      width: 50px;
+      margin-right: 30px;
+      margin-left: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      display: inline-block;
+      }
+      .join:hover {
+      background-color: rgb(41,118,212);
+      color: white;
+      }
+      .join:active {
+      opacity: 0.7;
+      }
+      .tweet {
+      background-color: rgb(2,158,255);
+      color: white;
+      margin-top: 10px;
+      border: none;
+      padding: 5px;
+      border-radius: 20px;
+      font-weight: medium;
+      font-size: 15px;
+      height: 36;
+      width: 60px;
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+      display: inline-block;
+      }
+      .tweet:hover {
+      box-shadow: 5px 5px 10px rgba(0,0,0.15);
+      }
+    </style>
+    </head>
+    <body>
+      <div>
+        <div>
+        <input class="search" type="text" placeholder="search">
+        </div>
+        <div>
+        <button class="subscribe">SUBSCRIBE
+        </button>
+        </div>
+        <div>
+        <button class="join">Join</button>
+        <button class="tweet">Tweet</button>
+        </div>
+      </div>
+    </body> 
+</html>

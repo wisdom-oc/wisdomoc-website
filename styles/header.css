@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(230,230,230);
+  z-index: 100;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+}
+.hamburger-menu {
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.youtube-logo {
+  height: 50px;
+}
+.middle-section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-bar {
+  flex :1;
+  height: 34px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192,192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0,0,0.05);  
+}
+.search-bar::placeholder {
+  font-size: 16px;
+}
+.search-button {
+  height: 38px;
+  width: 66px;
+  margin-left: -1px;
+  margin-right: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(190,190,190);
+  background-color: white;
+}
+.search-button,
+.voice-button,
+.upload-container, 
+.not-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-container .tooltip, 
+.not-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  bottom: -35px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-container:hover .tooltip, 
+.not-container:hover .tooltip {
+  opacity: 1;
+}
+.image1 {
+  height: 25px;
+}
+.voice-button {
+  height: 30px;
+  width: 40px;
+  background-color: rgb(245,245,245);
+  border: none;
+  border-radius: 15px;
+}
+.image2 {
+  height: 20px;
+}
+.right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.upload {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: rgb(245,245,245);
+}
+.you-apps {
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgb(245,245,245);
+}
+.not-bell {
+  height: 24px;
+}
+.not-container {
+  position: relative;
+}
+.not-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(200,0,0);
+  color: white;
+  font-size: 8px;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+.user-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+} 

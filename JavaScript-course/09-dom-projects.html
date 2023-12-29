@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM projects</title>
+</head>
+<body>
+  <!-- Process for JavaScript: 1. Figure out what steps we need(algorithm), 2. Convert these steps into code -->
+  
+  <!-- Steps: When we click the button, If the text is 'subscribe' then change to 'subscribed', if not, otherwise change back to 'subscribe'.  -->
+  
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+    subscribe(); <!-- calling the function to perform the code -->
+  " class="js-subscribe-button">Subscribe</button> <!-- .innerText gets only the text while .innerHTML gets the whole element -->
+  
+  <!-- Steps: when we click the button; . Get the text in the textbox(input), 2. If amount is <$40, add $10, finally display total cost on the webpage -->
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order" 
+  class="js-cost-input" onkeydown=" <!-- onkeydown executes immediately when we press enter -->
+    handleCostKeydown(event);
+  ">
+  <button onclick="
+    calculateTotal();
+  ">Calculate</button>
+  <p class="js-total-cost"></p>
+  <!-- How to make our code cleaner is to separate html and JavaScript differently -->
+  
+  <script>
+    <!-- Steps: When we click the keydown(enter); 1. Check if the key is 'Enter'; 2. if it is, do the same thing as rhe calculate button, calling the function (calculateTotal()). example below -->
+    function handleCostKeydown(event) {
+      if (event.key ==='Enter') {
+        calculateTotal();
+        <!-- console.log(event); Every event listener get an event object -->
+      }
+    };
+    
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input');
+      
+      let cost = Number(inputElement.value); <!-- We use (.value) to get the value in textbox(input). Whenever we get a value from the DOM, the value will be a string and using string for addition is an error eg('25' + '10) = 2510 instead of 35, to avoid the error so we converted the string value to number using (Number()) in line 41, best practice don't do math with string either use number(). -->
+      
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      <!-- The document object represent the webpage while the window object represent the browser, because of this, everything inside the webpage is inside the browser object examples: window.document is the same thing as document, window.console.log('window') is the same as console.log('window') etc. We don't have to add the window in front because JavaScript will automatically add it. -->
+      
+    document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+    };
+    
+    function subscribe() {
+      const buttonElement = document. querySelector('.js-subscribe-button');
+      if(buttonElement.innerHTML === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    };
+  </script>
+</body>
+</html>

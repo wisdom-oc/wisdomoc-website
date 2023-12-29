@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <!-- Another way to access the button when clicked, instead of onclick use addEventListener(); to use AddEventListener, though it does the same thing as onclick, first we gonna get the button and put it into the JavaScript using document.querySelector(), so we added a class to the button so that we can select it -->
+  <button onclick="" class="js-button">Click</button>
+  <script>
+     
+    <!-- addEventListener has two parameters which are: 1. Event('click') and comma at the end, 2. the function we want to run when we click the element, advantages of using addEventListener: 1. It lets us add Multiple event listeners for one event, 2. we can remove an event listener using .removeEventListener(); and it also has two parameters as .addEventListener(); Best practice is to use .addEventListener(); instead of onclick="" -->
+    
+    <!-- Using a variable to save function so that we can reuse it later -->
+     const buttonElement = document.querySelector('.js-button');   
+    
+    const eventListener = () => {
+  console.log('click me'); 
+  };
+  
+buttonElement.addEventListener('click', eventListener);
+
+buttonElement.addEventListener('click', () => {
+  console.log('click me again');
+});
+
+<!-- This code below removes .addEventListener up and display one above -->
+
+buttonElement.removeEventListener('click', eventListener);
+
+   
+    <!-- Every HTML element has a method called addEventListener(); addEventListener() lets us run some code when we interact with the element -->
+    
+    <!-- When passing a function into another function its best to use arrow Function(=>) rather than regular function -->
+    
+    function greeting() {
+      console.log('hello');
+    }
+    greeting();
+    
+    <!-- functions are also values, we can save a function inside a variable, example below -->
+    
+    <!-- In JavaScript as long as there's a way to access function, the function name is not needed anymore and its called (Anonymous function) a function without a name rather we use the variable name to access the function, examples below -->
+    
+    const function1 = function greeting() {
+      console.log('hello');
+    };
+    console.log(function1); <!-- it shows that function is saved inside variable -->
+    console.log(typeof function1); <!-- function -->
+    function1(); <!-- this brings out the output because we calld the function () -->
+    <!-- What else can we do with a value? Well we can save a value in an object -->
+    
+    const object1 = {
+      num: 2,
+      fun: function() {
+        console.log('hello3');
+      }
+    };
+    <!-- we use dotnotation to have access to object properties -->
+    object1.fun(); <!-- this will run the code in the object{} -->
+    
+    <!-- What else can we do with a value?, we can pass a value into a function -->
+    function display(param) {
+      console.log(param);
+    }
+    display(2 * 2); <!-- passing a value into a function and calling it -->
+    
+    <!-- we can also pass a function into a function, example below -->
+    function run(param) {
+      param();
+    }
+    run(function() {
+      console.log('hello4'); <!-- This is a callback function, in summary functions are values, anything we do with values can also be do with functions, practical examples are below -->
+    });
+    
+    <!-- setTimeout() allows us to run a function in the future, setTimeout is a built in function attached with bracket to call it, setTimeout() takes two parameters inside the bracket, the first parameter is: 1. A function that we want to run in the future, in the end add comma before 2. How long to wait before running this function(a number in milliseconds) 1000 milliseconds = 1 second. examples below  -->
+    setTimeout(function() {
+      console.log('timeout'); <!-- here we're using a function as a value and we're passing it into another function -->
+    }, 3000); <!-- after 3 seconds it will display timeout in the console -->
+    console.log('next line');
+    
+    <!-- An important concept called Asynchronous code; setTimeout() and setInterval are an asynchronous code because it doesn't wait for a line to finish before going to the next line, while synchronous code waits for a line to finish before going to the next line -->
+    
+    <!-- A similar function to setTimeout called setInterval, setInterval is a built in function attached with bracket to call it, setInterval() takes two parameters inside the bracket, the first parameter is: 1. A function that we want to run in the future, in the end add comma before 2. How long to wait before running this function(a number in milliseconds) 1000 milliseconds = 1 second. Now the differences btw setTimeout and setInterval is that: setInterval will keep on running the function every 5 seconds while setTimeout only runs the function once. Also setInterval(); returns a number we can use to stop the interval using clearInterval() examples below -->
+    
+    setInterval(function() {
+      console.log('interval');
+    }, 5000); <!-- it will keep on running the function every 5 seconds -->
+    console.log('next line2');
+    
+    <!-- Arrays methods include: 1. forEach() -->
+    
+    <!-- forEach() is the preferred way to loop through the array -->
+    
+    <!-- When passing a function into another function its best to use arrow Function(=>) rather than regular function -->
+    
+    [
+      'make dinner',
+      'wash dishes',
+      'watch YouTube'
+    ].forEach((value, index) => {
+      if(value === 'wash dishes') {
+        return; <!-- it works as continue in for loop because it skip one iteration and runs the rest, forEach don't have break, if we need to use break then its better to use regular for loop. -->
+      }
+      console.log(index);
+      console.log(value); <!-- This code loops through the array -->
+    });
+    
+    <!-- The shorter way to write functions is called Arrow Functions(=>), it also have parameters. Arrow Function works mostly the same way as a regular function but the difference is that Arrow Function have shortcuts more than regular function. examples below -->
+    const arrowFunction = (param, param2) => {
+     <!-- console.log(param * 5); same as below -->
+      return 5 * 5;
+    };
+    console.log(arrowFunction());
+    
+     const regularFunction = function (param, param2) {
+      console.log('hello');
+      return 5;
+    };
+    regularFunction();
+    
+    <!-- When an Arrow function have one parameter, the brackets are optional, we can remove it, example below -->
+    const oneParam = param => {
+      console.log(param + 1);
+    };
+    oneParam(2);
+    
+    <!-- When an Arrow function have one line code, the colin brackets{} are optional, we can remove it and also remove the return, and it won't affect the code example below -->
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+    
+    <!-- Instead of using arrow Function (=>) in object rather use shorthand method already provided by JavaScript because it makes our code easier to read in line 113 - 115 -->
+/*    const object2 {
+      method: () => {
+        
+      },
+      method() {
+      
+      }
+    };
+*/
+  </script>
+</body>
+</html>

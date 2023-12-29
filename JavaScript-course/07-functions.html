@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functions</title>
+</head>
+<body>
+  <script> 
+    <!-- Rules for function names: 1. can't use special word like function; 2. can't start with a number; 3. can't use special characters except $_; 4. Best practice use camelCase -->
+    
+    <!-- What is a function: A function lets us to reuse a code -->
+    function function1() {
+      console.log('hello');
+      console.log(2 + 2); <!-- This code will not run because i haven't call the function ||  it only create a function it doesn't run the code inside -->
+    }
+    function1(); <!-- calling the function to display the code in console.log -->
+    function1(); <!-- Keep on displaying as many as being called -->
+    
+     <!-- parameters puts a value into a function, it also works the same way as a variable -->
+     function calculateTax(cost, taxPercent = 0.1) { <!-- This just creates a function, it doesn't run the code inside. -->
+       console.log(cost * taxPercent);
+     }
+     <!-- (= 0.1) is a default value for a parameter set -->
+     calculateTax(2000, 0.2); <!-- passing a value into the function, () means argument -->
+     calculateTax(5000); <!-- calling the function to execute the code -->
+     
+     <!-- Rules for Parameter name: 1. can't use special word like function; 2. can't start with a number; 3. can't use special characters except $_; 4. Best practice use camelCase -->
+  </script> 
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPEhtml>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http.equip="X-UA-compatible" content=""/>
+    <title>Flex box practice</title>
+    <style>
+      .container {
+      display: flex;
+      flex-directon: row;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      column-gap: 3em;
+      row-gap: 3em;
+      }
+      .box {
+      width: 50px;
+      height: 50px;
+      font-size: 3em;
+      text-align: center;
+      border-radius: 15px;
+      }
+      #box1 {
+      background-color: red;
+      }
+      #box2 {
+      background-color: yellow;
+      }
+      #box3 {
+      background-color: green;
+      }
+      #box4 {
+      background-color: blue;
+      }
+      .oc {
+      background-color: pink;
+      flex-shrink: 1;
+      font-size: 2em;
+      height: 40px;
+      flex-grow: 2;
+      }
+      #oc {
+      background-color: purple;
+      flex-basis: 50px;
+      color: White;
+      font-size: 2em;
+      flex-grow: 1;
+      }
+      .wis {
+      margin-top: 150px;
+      display: flex;  
+      }
+    </style>
+  </head>
+  <body style="padding-bottom: 1000px;">
+    <div class="container">
+      <div class="box" id="box1">1</div>
+      <div class="box" id="box2">2</div>
+      <div class="box" id="box3">3</div>
+      <div class="box" id="box4">4</div>
+      <div class="box" id="box1">4</div>
+      <div class="box" id="box2">3</div>
+      <div class="box" id="box3">2</div>
+      <div class="box" id="box4">1</div>
+    </div>
+    <div class="wis">
+      <div class="oc">Wisdom</div>
+      <div id="oc">OC</div>
+    </div>
+  <div style="display: flex; flex-direction: row; margin-top: 50px; height: 70px; border-width: 1px; border-style: solid; border-color: gray;">
+    <div style="background-color: lightblue; width: 50px">100px</div>
+    <div style="background-color: lightpink; width: 50px;">100px</div>
+    <div style="background-color: lightblue; width: 50px">100px</div>
+  </div>
+   <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; height: 70px; border-width: 1px; border-style: solid; border-color: gray;">
+    <div style="background-color: lightblue; width: 50px">100px</div>
+    <div style="background-color: lightpink; width: 50px;">100px</div>
+    <div style="background-color: lightblue; width: 50px">100px</div>
+  </div>
+  <div style="display: flex; flex-direction: row; justify-content: end; margin-top: 50px; height: 70px; border-width: 1px; border-style: solid; border-color: gray;">
+    <div style="background-color: lightblue; width: 50px">100px</div>
+    <div style="background-color: lightpink; width: 50px;">100px</div>
+    <div style="background-color: lightblue; width: 50px">100px</div>
+  </div>
+   <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; margin-top: 50px; height: 70px; border-width: 1px; border-style: solid; border-color: gray;">
+    <div style="background-color: lightblue; width: 50px">100px</div>
+    <div style="background-color: lightpink; width: 50px;">100px</div>
+    <div style="background-color: lightblue; width: 50px">100px</div>
+  </div>
+  </body>
+</html>

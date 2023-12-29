@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <!-- DOM means: Document Object Model(DOM) and its among built-in object we have in JavaScript, DOM models the webpage, it also has methods, DOM combines JS and html together, it also gives JS full control of the webpage -->
+  
+  <button class="text">hello</button>
+  <button class="js-button">second button</button> <!-- class attribute adds a label to the button -->
+  
+  <script>
+    <!-- document.body.innerHTML = 'hello'; || <button>Good job!</button> Using the dot notation, we can access or change any element we wants to change -->
+    <!-- document.title = 'Good job!'; This line of code changes the title of this webpage into Good job! -->
+    
+    <!-- We can have html elements inside JavaScript, also the (Dom) combines JavaScript and html together -->
+    
+    console.log(document.title); <!-- The document.title gets the title name of the webpage and it can be change using the code in line 13 -->
+    
+    console.log(document.body); <!-- document.body gets the body of the webpage -->
+    
+     console.log(document.body.innerHTML); <!-- document.body.innerHTML gets all the code(html) saved in the body of the webpage and it can be change using the code in line 12 -->
+     
+     <!-- When an html elements is inside a JavaScript, the html elements is converted into a JavaScript object, examples below -->
+     console.log(typeof document.body); <!-- object -->
+     
+     <!-- A method is an function saved inside an object like document.querySelector(), document.querySelector() lets us to get any element from the page and put it inside JavaScript, examples below -->
+
+console.log(document.querySelector('button').innerHTML); <!-- This line of code allows us to access a particular element in html -->
+     
+     <!-- Every html element has a property called (.innerHTML) which lets us control the html inside the element, example is stated in line 28 -->
+     
+console.log(document.querySelector('.js-button')); <!-- we use dot for class attribute identification, document.querySelector() will select an element with a class js-button and display it in the console -->
+     
+     <!-- HTML elements are JavaScript objects, objects are values and can be saved inside a variable -->
+     const buttonElement = document.querySelector('.js-button'); <!-- Element is saved in variable -->
+     console.log(buttonElement);
+  </script>
+</body>
+</html>

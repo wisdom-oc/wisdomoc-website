@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+<body>
+  <!-- An Object lets us to group multiple values together lets us to use multiple values together and we can access it or change the value with the property on the left(its property), symbol of object is (= {}). It makes our code more organized -->
+  
+  <script>
+    const product = {
+      name: 'socks',
+      price: 1000
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+      product.name = 'cotton-socks'; <!-- reassigning a value in the existing property works perfectly while using object {}; -->
+    console.log(product.name); 
+     product.newProperty = true,
+     console.log(product.newProperty); 
+    
+    delete product.newProperty;
+    console.log(product.newProperty); <!-- delete will delete the value and result undefined -->
+    
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day', <!-- using bracket notation to save a value -->
+      
+      <!-- inside an object we can save any type of value -->
+      rating: {
+        stars: 4.5,
+        count: 87, <!-- nested object means an object inside an object {} -->
+      }, <!-- We use colon(:) to separate property and value and use comma to separate value and write another value -->
+      
+      fun: function function1 () {
+        console.log('function inside an object'); <!-- A function is another type of value and can be saved inside object -->
+      }
+    };
+    console.log(product2.name); <!-- We use dot notation(.) to access any value save inside object {}, we use dot notation by default. -->
+    console.log(product2['name']); <!-- We also use square bracket notation with string ['] to access any value saved into object {}. Bracket notation lets us to use property that doesn't work with dot notation -->
+    
+     console.log(product2['delivery-time']); <!-- dot notation doesn't work with (-) symbol but works with bracket notation -->
+      console.log(product2.rating.stars);
+      product2.fun(); <!-- calling the function -->
+      
+      <!-- Types of method(built-in-objects): 1. function() {}, 2. console.log(), 3. Math.random() etc. -->
+      
+      <!-- Two more built-in-objects: 1. JSON and localStorage. JSON built-in object helps us work with JSON, JSON means JavaScript Object Notation, its similar to JavaScript Object but has less features because its type is string and it doesn't support function, JSON is more Universal. We use JSON when we send data between computers and when we store data. JSON built-in object converts JavaScript object to JSON while JSON.parse() coverts JSON to JavaScript object, examples are below -->
+      
+      console.log(JSON.stringify(product2)); <!-- converts JavaScript object to JSON using JSON.stringify, and the code displayed uses double quotes (") -->
+      const jsonString =  JSON.stringify(product2);
+      console.log(JSON.parse(jsonString)); <!-- JSON.parse() coverts JSON to JavaScript object back to normal -->
+      
+      <!-- localStorage save values more permanently, variables are temporary because if we refresh or close the page, all the variables will be deleted, localStorage only supports strings example: localStorage.setItem('message', ) -->
+      
+      <!-- Auto-boxing automatically allow JavaScript to wrap a string in an object like a box, auto-boxing also have properties(.length) and method(toUpperCase()) and number(3.0.toString) and Boolean(true.toString()) but it does not work with null and undefined. Examples below -->
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+      console.log(true.toString());
+      console.log(3.0.toString());
+      
+      <!-- objects are references gives a reference to where something is, examples below -->
+      const object1 = {
+        message: 'hello',
+      };
+      const object2 = object1 <!-- copy by reference because object2 is equal to object1, both are referring to a particular place -->
+      object1.message = 'Good job!';
+      console.log(object2.message);
+      
+      <!-- We can't compare objects directly -->
+      const object3 = { <!-- another references -->
+        message: 'Good job!',
+      };
+      console.log(object3 === object1); <!-- false because we compare the references not the values inside -->
+      
+      console.log(object2 === object1); <!-- true because both are referring to one place -->
+      
+      <!-- Shortcuts for objects: 1. destructuring: its an easier way to take properties out of an object, examples below  -->
+      
+      const object4 = { 
+        message: 'Good job!',
+        price: 799
+      };
+      <!-- const message = object4.message; assigning a value into a variable, its shortcut in line 85 -->
+      
+      const { message, price } = object4; <!-- shortcut for object using destructuring instead the code in line 84 -->
+      console.log(message);
+      console.log(price); <!-- another property in line 83 will show up  -->
+      
+      <!-- Another shortcuts for objects called shorthand properties and shorthand method, examples below -->
+      
+      const object5 = {
+       <!-- message: message, -->
+        message, <!-- shortcuts for shorthand properties, it will still work perfectly, same with the code in line 93 -->
+       <!-- method: function function1()  { console.log('method'); } -->
+        method() { <!-- instead of using the function () {}, we use the shorthand method to make our code easier, same code in line 96 -->
+          console.log('method');
+        }
+      };
+      console.log(object5.message);
+      object5.method(); 
+      
+  </script>
+</body>
+</html>

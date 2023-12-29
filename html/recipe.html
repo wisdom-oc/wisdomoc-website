@@ -1,0 +1,225 @@
+<!DOCTYPEhtml>
+<html>
+    <head>
+        <title>recipe</title>
+      <style>
+          hr {
+          border-style: none;
+          border-top-style: dotted;
+          border-color: grey;
+          border-width: 0.2rem;
+          width: 3rem;
+          }
+      </style>
+    </head>
+         <body>
+             <!-- changing background color using a color name -->
+   <div style="background-color: lime">
+       <form>
+           <!-- TO DO: Add in an input for a first name -->
+         <label for="email-input"> please use @gmail.com:
+         </label>
+         <!-- REMEMBER: The pattern can take REGEX. Google this later -->
+         <input
+            id="email-input"
+            type="email"
+            placeholder="wisdomoc4@gmail.com"
+            pattern=".+@gmail\.com">
+            <!-- This input will trigger the action on the form when provided -->
+         <input type="submit"value="sign in">
+       </form>
+        <center><h1>INGREDIENTS</h1></center>
+            <p><ol>
+                  <li>Wheat</li>
+                  <li> Vitamin A Premix</li>
+                  <li>Water</li>
+               </ol>
+               <ul>
+                   <li>Ice cream</li>
+                   <li>Butter</li>
+                   <li>Sugar</li>
+               </ul>
+               <hr/>
+           </p> 
+       <form>
+     <label for="volume-input">volume</label>
+       <input id="volume-input" type="range" step="20" min="0" max="100" value="20">
+       <input type="submit">
+       </form>
+           <p><table border="3">
+                <th>Product</th>
+                     <th>Price</th>  
+            <tr>
+               <td>Bread</td>
+             <td>150</td>
+             </tr>
+            <tr>
+                 <td>Loya Milk</td>
+                 <td>120</td>
+                 </tr>
+               <tr>
+                <td>Overtea</td>
+               <td>100</td>
+               </tr>
+            </table></p>
+            <hr/>
+            <p><form>
+              <label> bread type</label>
+              <input name="bread type"><br/>
+               <label>quantity</label>
+               <input name="quantity"><br/>
+               <label>delivering date</label>
+              <input name="date"type="date">    
+              <button>order</button>
+            </form></p>
+            <h1>
+                PopCola
+            </h1>
+            <div style="color: #800080;">
+             <p style="text-align: right">Carbonated Soft Drink.</p></div>
+             <hr/>
+            <center><h1><u>INGREDIENTS:</u></h1></center>
+            <p><ol>
+                <li>Carbonated Water</li>
+               <li> Sugar</li>
+               <li>Color: Caramel</li>
+               </ol></p>
+               <ul>
+                   <li>Acidulant: Phosphoric Acid</li>
+                   <li>Cola Flavor and</li>
+                   <li>Caffeine</li>
+               </ul>
+           </p> 
+           <p><table border="5">
+                <p style="color: #ffffff;"> Good taste </p>
+                <hr/>
+               <th>NUTRITION INFORMATION</th>
+                     <th>Per 100 ml</th>  
+            <tr>
+               <td>Energy</td>
+             <td>210kj50.19kcal</td>
+             </tr>
+            <tr>
+                 <td>Carbohydrate</td>
+                 <td>11g</td>
+                 </tr>
+               <tr>
+                <td>Fat</td>
+               <td>0g</td>
+               </tr>
+               <tr>
+                <td>Fibre</td>
+               <td><0.5g</td>
+               </tr>
+               <tr>
+                <td>Protein</td>
+               <td><0.5g</td>
+               </tr>
+                  <tr>
+                <td>Salt</td>
+               <td><0.01g</td>
+               </tr>
+                <tr>
+                <td>Sodium</td>
+               <td>0.005g</td>
+               </tr>
+            </table></p>
+            <form>
+                <hr/>
+            <h2>
+                How are you doing today?
+            </h2>
+            <input id="fine-input"type="radio"name="experience"value="fine"checked >
+            <label for="fine-input">fine
+            </label>
+            <input id="not fine-input"type="radio"name="experience"value="not fine">
+            <label for="not fine-input">not fine
+            </label>
+            <input id="okay-input"type="radio"name="experience"value="okay">
+            <label for="okay-input">okay
+            </label>
+            <input id="not okay-input"type="radio"name="experience"value="not okay">
+            <label for="not okay-input">not okay
+            </label>
+            <input type="submit">
+            </form>
+            <hr/>
+            <label for="snacks-list">Which snacks do you want to add:</label>
+            <select name="snacks"  id="snacks-list" multiple>
+                <option value="">please choose an option</option>
+                <option value="biscuit"> biscuit</option>
+                <option value="lollipop"> lollipop</option>
+                <option value="chin-chin"> chin-chin</option>
+                <option value="meat-pie"> meat-pie</option>
+                 <option value="cheese-balls">cheese-balls</option>
+            </select>
+            <hr/>
+            <h3>Now select your size</h3>
+            <label for="size-list"> select your size:  </label>
+            <select name="sizes" id="size-list">
+               <option value="">Please select your option</option>
+             <option value="xs">XS</option>
+             <option value="s">S</option>   
+             <option value="m">M</option>
+             <option value="l">L</option>
+             <option value="xl">XL</option>
+             <option value="xxl">XXL</option>
+            </select>
+         <table border="7" cellpadding="5">
+             <tr>
+                 <th></th>
+                 <th>Product
+                 </th>
+                 <th>
+                     Quality
+                 </th>
+                 <th colspan="2">
+                     Quantity
+                 </th>
+                 <th>
+                     price
+                 </th>
+             </tr>
+             <tr>
+                  <td rowspan="3">
+                     Special
+                 </td>
+                 <td>
+                     Nylon
+                 </td>
+                 <td>
+                     super
+                 </td>
+                 <td>
+                     10
+                 </td>
+                 <td>
+                     20
+                 </td>
+                 <td>
+                     1000
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     Carton
+                 </td>
+                 <td>
+                     Nice
+                 </td>
+                 <td>
+                     40
+                 </td>
+                 <td>
+                     60
+                 </td>
+                 <td>
+                    5000
+                 </td>
+             </tr>
+         </table>
+        <p><a href="index.html">home-page</a>
+        </p>
+          <p style="color: #ffff00;"> Glory be to God </p>
+         </body>
+ </html>
